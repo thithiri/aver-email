@@ -1,0 +1,19 @@
+{
+    "id": "after-party-invite",
+    "name": "After Party Invite",
+    "description": "Check it is from walrus@aver.email, grab the secret code",
+    "regexes": [
+        {
+            "field": "sender",
+            "regex": "^walrus@aver\\.email$"
+        },
+        {
+            "field": "subject",
+            "regex": "invitation to \"([^\"]+)\""
+        },
+        {
+            "field": "body",
+            "regex": "your secret code is #([A-Z0-9]{10})"
+        }
+    ]
+}

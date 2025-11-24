@@ -1,0 +1,15 @@
+{
+    "id": "student-2025",
+    "name": "Active Student in 2025",
+    "description": "Recipient email address ends with .edu, received in 2025",
+    "regexes": [
+        {
+            "field": "recipient",
+            "regex": ".*\\.edu$"
+        },
+        {
+            "field": "date",
+            "regex": ">=2025-01-01"
+        }
+    ]
+}

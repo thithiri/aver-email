@@ -1,0 +1,11 @@
+{
+    "id": "mysten-labs-sender",
+    "name": "Mysten Labs (Sender)",
+    "description": "Sender email address contains @mystenlabs.com",
+    "regexes": [
+        {
+            "field": "sender",
+            "regex": ".*@mystenlabs\\.com$"
+        }
+    ]
+}
