@@ -21,6 +21,10 @@ mod apps {
     #[cfg(feature = "seal-example")]
     #[path = "seal-example/mod.rs"]
     pub mod seal_example;
+
+    #[cfg(feature = "aver-email")]
+    #[path = "aver-email/mod.rs"]
+    pub mod aver_email;
 }
 
 pub mod app {
@@ -32,6 +36,10 @@ pub mod app {
 
     #[cfg(feature = "seal-example")]
     pub use crate::apps::seal_example::*;
+
+
+    #[cfg(feature = "aver-email")]
+    pub use crate::apps::aver_email::*;
 }
 
 pub mod common;

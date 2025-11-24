@@ -1,0 +1,6 @@
+# External endpoints that the enclave is allowed to access. 
+endpoints:
+  # DNS over HTTPS (DoH) endpoint for DKIM verification
+  # Google DoH uses port 443 (HTTPS) - works with default configure_enclave.sh setup
+  # See: https://developers.google.com/speed/public-dns/docs/doh
+  - dns.google

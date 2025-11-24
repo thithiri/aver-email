@@ -29,6 +29,14 @@ lazy_static = "1.4"
 uuid = { version = "1.0", features = ["v4"] }
 regex = { version = "1.5", optional = true }
 
+mail-auth = { version = "0.6.1", optional = true }
+base64 = { version = "0.21", optional = true }
+# Add hickory-resolver with DoH support to extend mail-auth
+# Note: dns-over-https requires dns-over-https-rustls or dns-over-https-openssl
+# webpki-roots provides root CA certificates for TLS certificate validation
+hickory-resolver = { version = "0.24", features = ["dns-over-https", "dns-over-https-rustls", "webpki-roots"], optional = true }
+chrono = { version = "0.4", features = ["serde"], optional = true }
+
 sui-sdk-types = { version = "0.1.0", features = ["serde", "hash"], optional = true }
 sui-crypto = { version = "0.1.0", features = ["ed25519"], optional = true }
 seal-sdk = { git = "https://github.com/MystenLabs/seal", rev = "cdb6ddf104eca6055d69080608da010a83d736bf", package = "seal-sdk", optional = true }
@@ -37,3 +45,4 @@ seal-sdk = { git = "https://github.com/MystenLabs/seal", rev = "cdb6ddf104eca605
 weather-example = []
 twitter-example = ["regex"]
 seal-example = ["sui-crypto", "sui-sdk-types", "seal-sdk"]
+aver-email = ["mail-auth", "base64", "hickory-resolver", "regex", "chrono"]
